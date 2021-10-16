@@ -12,6 +12,7 @@ Pass the coordinates of the vertices of two rectangles to the function rotated_r
  # EXAMPLE
  I have written an example for you to check.
  I use love2d to create it, you can download love2d here: https://love2d.org/
+ or you can run main.exe
 ![love_zd7YNEkLH4](https://user-images.githubusercontent.com/58079308/137572663-3c912566-461e-4c9d-8164-a52d23cfe49d.png)
 ![love_5gCr3WMZhi](https://user-images.githubusercontent.com/58079308/137572666-080bbead-718c-4543-a993-639043643127.png)
 ![love_TUK2gifIV5](https://user-images.githubusercontent.com/58079308/137572671-f3fece4d-9ef1-479a-807c-b2697ac2b874.png)
