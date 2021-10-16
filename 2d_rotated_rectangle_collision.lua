@@ -24,21 +24,21 @@ local function doIntersect(p1x, p1y, q1x, q1y, p2x, p2y, q2x, q2y)
     return false
 end
 
-local function rotated_rectangle_collision_detection(x1_1, y1_1, x2_1, y2_1, x3_1, y3_1, x4_1, y4_1,  x1_2, y1_2, x2_2, y2_2, x3_2, y3_2, x4_2, y4_2)
-    if doIntersect(x1_1, y1_1, x2_1, y2_1, x1_2, y1_2, x2_2, y2_2) or 
-       doIntersect(x1_1, y1_1, x2_1, y2_1, x3_2, y3_2, x2_2, y2_2) or 
-       doIntersect(x1_1, y1_1, x2_1, y2_1, x3_2, y3_2, x4_2, y4_2) or 
-       doIntersect(x1_1, y1_1, x2_1, y2_1, x1_2, y1_2, x4_2, y4_2) or 
-       doIntersect(x2_1, y2_1, x3_1, y3_1, x1_2, y1_2, x2_2, y2_2) or 
-       doIntersect(x2_1, y2_1, x3_1, y3_1, x3_2, y3_2, x2_2, y2_2) or 
-       doIntersect(x2_1, y2_1, x3_1, y3_1, x3_2, y3_2, x4_2, y4_2) or 
-       doIntersect(x2_1, y2_1, x3_1, y3_1, x1_2, y1_2, x4_2, y4_2) or 
-       doIntersect(x3_1, y3_1, x4_1, y4_1, x1_2, y1_2, x2_2, y2_2) or 
-       doIntersect(x3_1, y3_1, x4_1, y4_1, x3_2, y3_2, x2_2, y2_2) or 
-       doIntersect(x3_1, y3_1, x4_1, y4_1, x3_2, y3_2, x4_2, y4_2) or 
-       doIntersect(x3_1, y3_1, x4_1, y4_1, x1_2, y1_2, x4_2, y4_2) or 
-       doIntersect(x1_1, y1_1, x4_1, y4_1, x1_2, y1_2, x2_2, y2_2) or 
-       doIntersect(x1_1, y1_1, x4_1, y4_1, x3_2, y3_2, x2_2, y2_2) or 
-       doIntersect(x1_1, y1_1, x4_1, y4_1, x3_2, y3_2, x4_2, y4_2) or 
-       doIntersect(x1_1, y1_1, x4_1, y4_1, x1_2, y1_2, x4_2, y4_2) then return true else return false end
+local function rotated_rectangle_collision_detection(ax, ay, bx, by, cx, cy, dx, dy, ex, ey, fx, fy, gx, gy, hx, hy)
+    if doIntersect(ax, ay, bx, by, ex, ey, fx, fy) or 
+       doIntersect(ax, ay, bx, by, gx, gy, fx, fy) or 
+       doIntersect(ax, ay, bx, by, gx, gy, hx, hy) or 
+       doIntersect(ax, ay, bx, by, ex, ey, hx, hy) or 
+       doIntersect(bx, by, cx, cy, ex, ey, fx, fy) or 
+       doIntersect(bx, by, cx, cy, gx, gy, fx, fy) or 
+       doIntersect(bx, by, cx, cy, gx, gy, hx, hy) or 
+       doIntersect(bx, by, cx, cy, ex, ey, hx, hy) or 
+       doIntersect(cx, cy, dx, dy, ex, ey, fx, fy) or 
+       doIntersect(cx, cy, dx, dy, gx, gy, fx, fy) or 
+       doIntersect(cx, cy, dx, dy, gx, gy, hx, hy) or 
+       doIntersect(cx, cy, dx, dy, ex, ey, hx, hy) or 
+       doIntersect(ax, ay, dx, dy, ex, ey, fx, fy) or 
+       doIntersect(ax, ay, dx, dy, gx, gy, fx, fy) or 
+       doIntersect(ax, ay, dx, dy, gx, gy, hx, hy) or 
+       doIntersect(ax, ay, dx, dy, ex, ey, hx, hy) then return true else return false end
 end
